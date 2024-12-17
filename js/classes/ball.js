@@ -19,6 +19,7 @@ export class Ball extends Game {
     this.x += this.speedX;
     this.y += this.speedY;
 
+    // Rebond sur les bords
     if (this.y - this.radius <= 0 || this.y + this.radius >= canvas.height) {
       this.speedY = -this.speedY;
     }
